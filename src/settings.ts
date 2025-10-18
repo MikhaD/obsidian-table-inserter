@@ -2,9 +2,9 @@ import TableInserter from "main";
 import { PluginSettingTab, Setting } from "obsidian";
 
 export const enum Align {
-	left = "align-left",
-	center = "align-center",
-	right = "align-right",
+	left = "text-align-start",
+	center = "text-align-center",
+	right = "text-align-end",
 }
 export interface PluginSettings {
 	insertGridSize: number;
@@ -35,10 +35,8 @@ export class SettingsTab extends PluginSettingTab {
 
 		containerEl.empty();
 
-		containerEl.createEl("h2", { text: "Table Inserter Settings" });
-
 		new Setting(containerEl)
-			.setName("Allow Custom Sizes")
+			.setName("Allow custom sizes")
 			.setDesc(
 				"Show text boxes for width and height that can be used instead of the grid on the insert table modal."
 			)
@@ -51,7 +49,7 @@ export class SettingsTab extends PluginSettingTab {
 					})
 			);
 		new Setting(containerEl)
-			.setName("Show Alignment Buttons")
+			.setName("Show alignment buttons")
 			.setDesc("Show alignment buttons on the insert table modal.")
 			.addToggle((cb) =>
 				cb
@@ -62,7 +60,7 @@ export class SettingsTab extends PluginSettingTab {
 					})
 			);
 		new Setting(containerEl)
-			.setName("Overwrite Insert Table Right Click Option")
+			.setName("Overwrite insert table right click option")
 			.setDesc("Replace the default insert table option in the right click menu (Insert > Table).")
 			.addToggle((cb) =>
 				cb
@@ -73,7 +71,7 @@ export class SettingsTab extends PluginSettingTab {
 					})
 			);
 		new Setting(containerEl)
-			.setName("Insert Table Grid Size")
+			.setName("Insert table grid size")
 			.setDesc("The maximum size of the grid on the insert table modal.")
 			.addSlider((slider) =>
 				slider
@@ -86,12 +84,12 @@ export class SettingsTab extends PluginSettingTab {
 					.setDynamicTooltip()
 			);
 		const alignment = new Setting(containerEl)
-			.setName("Default Table Alignment")
+			.setName("Default table alignment")
 			.setDesc("The alignment of table content in newly created tables.")
 			.addButton((button) =>
 				button
-					.setIcon("align-left")
-					.setTooltip("Align Left")
+					.setIcon("text-align-start")
+					.setTooltip("Align left")
 					.setClass("TIns-align-button")
 					.setDisabled(this.plugin.settings.alignment === Align.left)
 					.onClick(async (e) => {
@@ -105,7 +103,7 @@ export class SettingsTab extends PluginSettingTab {
 			)
 			.addButton((button) =>
 				button
-					.setIcon("align-center")
+					.setIcon("text-align-center")
 					.setTooltip("Center")
 					.setClass("TIns-align-button")
 					.setDisabled(
@@ -122,8 +120,8 @@ export class SettingsTab extends PluginSettingTab {
 			)
 			.addButton((button) =>
 				button
-					.setIcon("align-right")
-					.setTooltip("Align Right")
+					.setIcon("text-align-end")
+					.setTooltip("Align right")
 					.setClass("TIns-align-button")
 					.setDisabled(this.plugin.settings.alignment === Align.right)
 					.onClick(async (e) => {

@@ -1,5 +1,5 @@
 import { ICONS } from "icons";
-import { Modal, Editor, App, Notice } from "obsidian";
+import { Modal, Editor, App } from "obsidian";
 import { Align, PluginSettings } from "settings";
 
 export default class InsertTableModal extends Modal {
@@ -9,16 +9,18 @@ export default class InsertTableModal extends Modal {
 
 	constructor(app: App, settings: PluginSettings) {
 		super(app);
+		this.table = [];
+		this.editor = null!;
 		this.settings = settings;
 		this.contentEl.addClass("TIns-insert");
-		this.titleEl.setText("Insert Table");
+		this.titleEl.setText("Insert table");
 		this.titleEl.addClass("TIns-insert-title");
 		this.generateInsertTable(this.settings.insertGridSize);
 	}
 
 	generateInsertTable(size: number) {
 		let alignment = this.settings.alignment;
-		this.contentEl.innerHTML = "";
+		this.contentEl.empty();
 		this.table = [];
 		for (let i = 0; i < size; ++i) {
 			this.table.push([]);
@@ -120,7 +122,6 @@ export default class InsertTableModal extends Modal {
 	}
 
 	generateTable(rows: number, cols: number, alignment: Align) {
-		console.log("Generating table:", rows, cols, alignment);
 		const row = "|     ".repeat(cols) + "|";
 		const separator =
 			`|${alignment === Align.right ? " " : ":"}---${
@@ -163,7 +164,7 @@ export default class InsertTableModal extends Modal {
 	}
 
 	reset() {
-		this.titleEl.setText("Insert Table");
+		this.titleEl.setText("Insert table");
 		this.contentEl
 			.querySelectorAll(".hover")
 			.forEach((cell) => cell.removeClass("hover"));
@@ -192,7 +193,7 @@ export default class InsertTableModal extends Modal {
 		const rows = parseInt(element.getAttribute("row")!);
 		const columns = parseInt(element.getAttribute("column")!);
 
-		this.titleEl.setText(`Insert ${columns}×${rows} Table`);
+		this.titleEl.setText(`Insert ${columns}×${rows} table`);
 
 		for (let row = 0; row < rows; ++row) {
 			for (let column = 0; column < columns; ++column) {

@@ -1,7 +1,7 @@
 {
 	"name": "table-inserter",
 	"version": "1.0.0",
-	"description": "Add a table insertion dialog and keyboard shortcuts similar to those in Microsoft Word, Google Docs etc.",
+	"description": "Add a table insertion dialog and keyboard shortcuts similar to those in Microsoft Word, Google Docs, etc.",
 	"main": "main.js",
 	"repository": {
 		"type": "git",
@@ -22,13 +22,13 @@
 	"author": "MikhaD",
 	"license": "0BSD",
 	"devDependencies": {
-		"@types/node": "^22.15.18",
-		"@typescript-eslint/eslint-plugin": "8.32.1",
-		"@typescript-eslint/parser": "8.32.1",
+		"@types/node": "^24.8.1",
+		"@typescript-eslint/eslint-plugin": "8.46.1",
+		"@typescript-eslint/parser": "8.46.1",
 		"builtin-modules": "5.0.0",
-		"esbuild": "0.25.4",
+		"esbuild": "0.25.11",
 		"obsidian": "latest",
 		"tslib": "2.8.1",
-		"typescript": "5.8.3"
+		"typescript": "5.9.3"
 	}
 }

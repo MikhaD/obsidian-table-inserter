@@ -20,8 +20,10 @@ A plugin that adds an MS Word style table insertion dialog.
 ### Custom Size
 ![Custom Size](./media/custom_demo.gif)
 
-### Issues
+## Issues
 If you encounter any bugs or have feature requests, please open an issue on the github repository [here](https://github.com/MikhaD/obsidian-table-inserter/issues).
 
-
+## Credit
 Created by [MikhaD](https://mikha.dev). Please leave a star on the [repository](https://github.com/MikhaD/obsidian-table-inserter) if you like the plugin ⭐
+
+Icons from [Lucide](https://lucide.dev/)

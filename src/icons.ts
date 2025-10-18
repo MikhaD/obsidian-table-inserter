@@ -2,28 +2,25 @@ import { addIcon } from "obsidian";
 import { Align } from "settings";
 
 export const ICONS = {
-	"align-left": `
-	<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-		<rect width="100" height="7" fill="currentColor"/>
-		<rect y="31" width="70" height="7" fill="currentColor"/>
-		<rect y="62" width="100" height="7" fill="currentColor"/>
-		<rect y="93" width="70" height="7" fill="currentColor"/>
+	"text-align-start": `
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-text-align-start-icon lucide-text-align-start">
+		<path d="M21 5H3"/>
+		<path d="M15 12H3"/>
+		<path d="M17 19H3"/>
 	</svg>
 	`,
-	"align-center": `
-	<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-		<rect width="100" height="7" fill="currentColor"/>
-		<rect y="31" x="15" width="70" height="7" fill="currentColor"/>
-		<rect y="62" width="100" height="7" fill="currentColor"/>
-		<rect y="93" x="15" width="70" height="7" fill="currentColor"/>
+	"text-align-center": `
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-text-align-center-icon lucide-text-align-center">
+		<path d="M21 5H3"/>
+		<path d="M17 12H7"/>
+		<path d="M19 19H5"/>
 	</svg>
 	`,
-	"align-right": `
-	<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-		<rect width="100" height="7" fill="currentColor"/>
-		<rect y="31" x="30" width="70" height="7" fill="currentColor"/>
-		<rect y="62" width="100" height="7" fill="currentColor"/>
-		<rect y="93" x="30" width="70" height="7" fill="currentColor"/>
+	"text-align-end": `
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-text-align-end-icon lucide-text-align-end">
+		<path d="M21 5H3"/>
+		<path d="M21 12H9"/>
+		<path d="M21 19H7"/>
 	</svg>
 	`,
 } as Record<Align, string>;
