@@ -57,12 +57,7 @@ export default class TableInserter extends Plugin {
 		this.addCommand({
 			id: "insert-table-modal",
 			name: "Insert table",
-			hotkeys: [
-				{
-					modifiers: ["Mod", "Shift"],
-					key: "3",
-				},
-			],
+			hotkeys: [],
 			editorCallback: (editor: Editor, view: MarkdownView) => {
 				this.insertTableModal.open(editor);
 			},
