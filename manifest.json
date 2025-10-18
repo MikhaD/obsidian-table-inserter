@@ -3,7 +3,7 @@
 	"name": "Table Inserter",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Add a table insertion dialog and keyboard shortcuts similar to those in Microsoft Word, Google Docs etc.",
+	"description": "Add a table insertion dialog and keyboard shortcuts similar to those in Microsoft Word, Google Docs, etc.",
 	"author": "MikhaD",
 	"authorUrl": "https://github.com/MikhaD",
 	"isDesktopOnly": false

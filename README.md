@@ -1,5 +1,5 @@
 # Obsidian Table Inserter
-A plugin that adds a MS Word style table insertion dialog.
+A plugin that adds an MS Word style table insertion dialog.
 ![Basic Demo](./media/basic_demo.gif)
 
 ## Features
@@ -10,7 +10,7 @@ A plugin that adds a MS Word style table insertion dialog.
 1. Choose the cell alignment for the table.
 
 ## Settings
-==screenshot of settings==
+<div align="center"><img src="./media/settings.png" alt="settings page"></div>
 
 ## Examples
 
