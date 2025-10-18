@@ -1,6 +1,6 @@
 {
 	"name": "table-inserter",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Add a table insertion dialog and keyboard shortcuts similar to those in Microsoft Word, Google Docs, etc.",
 	"main": "main.js",
 	"repository": {
